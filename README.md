@@ -136,7 +136,7 @@ pip install -e ".[dev]"
 ## Correr los tests
 
 ```bash
-pytest
+python -m pytest test_weather_tool.py -v
 ```
 
 Los tests deben pasar sin hacer llamadas reales a la API.
