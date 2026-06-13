@@ -128,7 +128,7 @@ source .venv/bin/activate
 Una vez activo, instala las dependencias:
 
 ```bash
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 ```
 
 > Verifica que el entorno esté activo: el prompt del terminal debe mostrar `(.venv)` al inicio.
@@ -136,7 +136,7 @@ pip install -e ".[dev]"
 ## Correr los tests
 
 ```bash
-pytest
+python -m pytest test_weather_tool.py -v
 ```
 
 Los tests deben pasar sin hacer llamadas reales a la API.

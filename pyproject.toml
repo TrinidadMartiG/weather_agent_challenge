@@ -11,5 +11,8 @@ dev = [
     "pytest>=7.4.0",
 ]
 
+[tool.setuptools]
+py-modules = ["weather_tool"]
+
 [tool.pytest.ini_options]
 testpaths = ["."]
