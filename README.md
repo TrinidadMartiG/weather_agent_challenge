@@ -8,7 +8,7 @@ Completa la función `get_weather(city: str)` en `weather_tool.py` para que:
 
 1. Resuelva el nombre de la ciudad a latitud y longitud
 2. Consulte el clima actual y devuelva un objeto `Weather` tipado
-3. Maneje errores: fallo de red y ciudad no encontrada
+3. Maneje errores: fallo de respuesta y ciudad no encontrada
 4. Use un timeout apropiado
 5. Sea testeable con mocks (sin hacer llamadas reales a la API)
 
@@ -19,8 +19,6 @@ Luego completa los dos tests en `test_weather_tool.py`.
 ---
 
 ## API de referencia — Open-Meteo
-
-No requiere API key. Gratuita para uso no comercial.
 
 Documentación oficial: https://open-meteo.com/en/docs
 
@@ -131,12 +129,10 @@ Una vez activo, instala las dependencias:
 python -m pip install -e ".[dev]"
 ```
 
-> Verifica que el entorno esté activo: el prompt del terminal debe mostrar `(.venv)` al inicio.
-
 ## Correr los tests
 
 ```bash
-python -m pytest test_weather_tool.py -v
+pytest test_weather_tool.py -v
 ```
 
 Los tests deben pasar sin hacer llamadas reales a la API.
